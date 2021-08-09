@@ -149,6 +149,7 @@ main {
   main {
     padding: 20px 0;
     height: 100%;
+    align-items: flex-start;
   }
 
   .card-wrapper {
@@ -164,5 +165,10 @@ main {
 
   .card-desc {
     margin-bottom: 25px;
+  }
+
+  .attribution {
+    font-size: 12px;
+    margin-left: 10px;
   }
 }

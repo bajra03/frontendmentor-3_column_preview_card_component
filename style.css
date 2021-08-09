@@ -54,8 +54,7 @@ main {
 }
 
 .card-wrapper {
-  max-width: 1440px;
-  width: 46%;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
   border-radius: 10px;
@@ -69,6 +68,10 @@ main {
 
 .card {
   padding: 40px 25px 40px 40px;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
 }
 
 .card-title {
@@ -84,7 +87,7 @@ main {
 .card-desc {
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.5em;
-  margin-bottom: 90px;
+  letter-spacing: 0.4px;
 }
 
 .card-button a {
@@ -101,10 +104,16 @@ main {
   color: #fff;
 }
 
-@media (min-width: 1440px) {
-  .card-wrapper {
-    width: 863px;
-  }
+.card-desc-wrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-button {
+  display: flex;
 }
 
 @media (max-width: 1366px) {
@@ -125,6 +134,17 @@ main {
   }
 }
 
+@media (min-width: 482px) and (max-width: 690px) {
+  .card-desc {
+    font-size: 70%;
+  }
+
+  .card-button a {
+    font-size: 70%;
+    padding: 10px 10%;
+  }
+}
+
 @media (max-width: 480px) {
   main {
     padding: 20px 0;
@@ -133,6 +153,16 @@ main {
 
   .card-wrapper {
     flex-direction: column;
-    width: 85%;
+    width: 95%;
+  }
+
+  .card {
+    padding: 40px 25px;
+    width: 100%;
+    min-height: auto;
+  }
+
+  .card-desc {
+    margin-bottom: 25px;
   }
 }
